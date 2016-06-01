@@ -4,7 +4,7 @@
 
 Include this private module by adding the following under `dependencies` in `package.json`, and run `npm install`.
 
-    "snapmobile-flashmessage": "git+ssh://@github.com/SnapMobileIO/SnapMobile-Filter.git",
+    "snapmobile-filter": "git+ssh://git@github.com/SnapMobileIO/SnapMobile-Filter.git",
 
 To configure, add the following to `app.js`:
 
