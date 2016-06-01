@@ -1,16 +1,16 @@
-# SnapMobile-FlashMessage
+# SnapMobile-Filter
 
 # Usage
 
 Include this private module by adding the following under `dependencies` in `package.json`, and run `npm install`.
 
-    "snapmobile-flashmessage": "git+ssh://@github.com/SnapMobileIO/SnapMobile-FlashMessage.git",
+    "snapmobile-flashmessage": "git+ssh://@github.com/SnapMobileIO/SnapMobile-Filter.git",
 
 To configure, add the following to `app.js`:
 
-    import 'snapmobile-flashmessage';
+    import 'snapmobile-filter';
     
-Finally, add 'adminApp' as a dependency for the angular app.
+Finally, add 'Filter' as a dependency for the angular app.
 
 # Updating
 
