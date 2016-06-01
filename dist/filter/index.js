@@ -19,3 +19,5 @@ var _filter6 = _interopRequireDefault(_filter5);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 _angular2.default.module('FilterModule', []).service('Filter', _filter2.default).directive('filterQuery', _filter4.default).controller('FilterController', _filter6.default);
+
+require('./filter.js');

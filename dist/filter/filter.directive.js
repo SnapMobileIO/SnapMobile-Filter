@@ -4,7 +4,6 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 function filterDirective() {
-  require('./filter.js');
   return {
     restrict: 'EA',
     transclude: true,

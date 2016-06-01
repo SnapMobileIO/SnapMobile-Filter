@@ -1,7 +1,6 @@
 'use strict';
 
 function filterDirective() {
-  require('./filter.js');
   return {
     restrict: 'EA',
     transclude: true,

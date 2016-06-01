@@ -9,3 +9,5 @@ angular.module('FilterModule', [])
   .service('Filter', Filter)
   .directive('filterQuery', filterDirective)
   .controller('FilterController', FilterController);
+
+require('./filter.js');
