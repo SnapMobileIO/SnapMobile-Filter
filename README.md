@@ -10,7 +10,7 @@ To configure, add the following to `app.js`:
 
     import 'snapmobile-filter';
     
-Finally, add 'Filter' as a dependency for the angular app.
+Finally, add 'FilterModule' as a dependency for the angular app.
 
 # Updating
 
