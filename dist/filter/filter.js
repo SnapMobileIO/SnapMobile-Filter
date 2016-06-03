@@ -13,7 +13,7 @@ module.run(['$templateCache', function($templateCache) {
     '        <label for="fieldSelect">Field: </label></br>\n' +
     '        <select class="form-control" name="fieldSelect" ng-model="filter.field" required/>\n' +
     '          <option value="">---Please select---</option>\n' +
-    '          <option ng-repeat="filter in filterCtrl.schema" ng-selected="filter.field === filter" ng-if="filter.path" value="{{filter.path}}">{{filter.path}}</option>\n' +
+    '          <option ng-repeat="schema in filterCtrl.schema" ng-selected="schema.field === filter" ng-if="schema.path && schema.instance !== \'Hidden\'" value="{{schema.path}}">{{schema.path}}</option>\n' +
     '        </select>\n' +
     '      </div>\n' +
     '      <div class="col-md-4 form-group">\n' +

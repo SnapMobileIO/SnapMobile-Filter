@@ -75,6 +75,7 @@ var FilterController = function () {
       this.filters.length = 0;
       this.addFilters();
       this.resetFilters();
+      window.history.pushState({}, document.title, window.location.href.split('?')[0]);
     }
 
     /**

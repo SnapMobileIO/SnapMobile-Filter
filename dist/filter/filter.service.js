@@ -18,7 +18,8 @@ var Filter = function () {
       Boolean: ['true', 'false'],
       Date: ['less than', 'greater than', 'less than or equal to', 'greater than or equal to'],
       ObjectID: ['equals', 'not equal', 'like'],
-      Image: ['equals', 'not equal', 'like']
+      Image: ['equals', 'not equal', 'like'],
+      Array: ['equals', 'not equal', 'like']
     };
   }
 
