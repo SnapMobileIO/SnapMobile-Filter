@@ -30,10 +30,7 @@ var Filter = function () {
       var query = { limit: itemsPerPage, skip: skip, sort: sort };
 
       for (var i = 0; i < filters.length; i++) {
-
-        /**
-         * Build the query object so the server receives an array of filter objects
-         */
+        // Build the query object so the server receives an array of filter objects
         query['filters[' + count + '][field]'] = filters[i].field;
         query['filters[' + count + '][operator]'] = filters[i].operator;
         query['filters[' + count + '][value]'] = filters[i].value;
@@ -42,6 +39,11 @@ var Filter = function () {
       };
 
       return query;
+    }
+  }, {
+    key: 'buildFilter',
+    value: function buildFilter(field, operator, value) {
+      return { field: field, operator: operator, value: value };
     }
   }]);
 
