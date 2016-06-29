@@ -6,8 +6,8 @@
         <select class="form-control" name="fieldSelect" ng-model="filter.field" required/>
           <option value="">---Please select---</option>
           <!-- If this is a relationship, use the displayKey -->
-          <option ng-repeat="schema in filterCtrl.schema" ng-selected="schema.field === filter" ng-if="schema.path && schema.displayKey && schema.instance !== 'Hidden'" value="{{schema.path}}.{{schema.displayKey}}">{{schema.path}}</option>
-          <option ng-repeat="schema in filterCtrl.schema" ng-selected="schema.field === filter" ng-if="schema.path && !schema.displayKey && schema.instance !== 'Hidden'" value="{{schema.path}}">{{schema.path}}</option>
+          <option ng-repeat="schema in filterCtrl.schema" ng-selected="schema.field === filter" ng-if="schema.path && schema.displayKey && schema.instance !== 'Hidden'" value="{{schema.path}}.{{schema.displayKey}}">{{(schema.displayName || schema.path)}}</option>
+          <option ng-repeat="schema in filterCtrl.schema" ng-selected="schema.field === filter" ng-if="schema.path && !schema.displayKey && schema.instance !== 'Hidden'" value="{{schema.path}}">{{(schema.displayName || schema.path)}}</option>
         </select>
       </div>
       <div class="col-md-4 form-group">

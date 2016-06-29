@@ -14,8 +14,8 @@ module.run(['$templateCache', function($templateCache) {
     '        <select class="form-control" name="fieldSelect" ng-model="filter.field" required/>\n' +
     '          <option value="">---Please select---</option>\n' +
     '          <!-- If this is a relationship, use the displayKey -->\n' +
-    '          <option ng-repeat="schema in filterCtrl.schema" ng-selected="schema.field === filter" ng-if="schema.path && schema.displayKey && schema.instance !== \'Hidden\'" value="{{schema.path}}.{{schema.displayKey}}">{{schema.path}}</option>\n' +
-    '          <option ng-repeat="schema in filterCtrl.schema" ng-selected="schema.field === filter" ng-if="schema.path && !schema.displayKey && schema.instance !== \'Hidden\'" value="{{schema.path}}">{{schema.path}}</option>\n' +
+    '          <option ng-repeat="schema in filterCtrl.schema" ng-selected="schema.field === filter" ng-if="schema.path && schema.displayKey && schema.instance !== \'Hidden\'" value="{{schema.path}}.{{schema.displayKey}}">{{(schema.displayName || schema.path)}}</option>\n' +
+    '          <option ng-repeat="schema in filterCtrl.schema" ng-selected="schema.field === filter" ng-if="schema.path && !schema.displayKey && schema.instance !== \'Hidden\'" value="{{schema.path}}">{{(schema.displayName || schema.path)}}</option>\n' +
     '        </select>\n' +
     '      </div>\n' +
     '      <div class="col-md-4 form-group">\n' +
