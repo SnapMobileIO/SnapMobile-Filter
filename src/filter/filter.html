@@ -5,14 +5,16 @@
         <label for="fieldSelect">Field: </label></br>
         <select class="form-control" name="fieldSelect" ng-model="filter.field" required/>
           <option value="">---Please select---</option>
-          <option ng-repeat="schema in filterCtrl.schema" ng-selected="schema.field === filter" ng-if="schema.path && schema.instance !== 'Hidden'" value="{{schema.path}}">{{schema.path}}</option>
+          <!-- If this is a relationship, use the displayKey -->
+          <option ng-repeat="schema in filterCtrl.schema" ng-selected="schema.field === filter" ng-if="schema.path && schema.displayKey && schema.instance !== 'Hidden'" value="{{schema.path}}.{{schema.displayKey}}">{{schema.path}}</option>
+          <option ng-repeat="schema in filterCtrl.schema" ng-selected="schema.field === filter" ng-if="schema.path && !schema.displayKey && schema.instance !== 'Hidden'" value="{{schema.path}}">{{schema.path}}</option>
         </select>
       </div>
       <div class="col-md-4 form-group">
         <label for="operatorSelect">Operator: </label></br>
         <select class="form-control" name="operatorSelect" ng-model="filter.operator" required/>
           <option value="">---Please select---</option>
-          <option ng-repeat="operator in filterCtrl.Filter.operators[filterCtrl.schema[filter.field].instance]" ng-selected="filter.operator === operator">{{operator}}</option>
+          <option ng-repeat="operator in filterCtrl.Filter.operators[filterCtrl.schema[filter.field].instance || 'String']" ng-selected="filter.operator === operator">{{operator}}</option>
         </select>
       </div>
       <div class="col-md-4 form-group" ng-if="filterCtrl.schema[filter.field].instance != 'Boolean' && filterCtrl.schema[filter.field].instance != 'Date'">
